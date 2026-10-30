@@ -31,7 +31,7 @@
       margin: 0 auto;
       padding: 40px 20px;
       display: grid;
-      grid-template-columns: 320px 1fr;
+      grid-template-columns: 340px 1fr;
       gap: 40px;
     }
 
@@ -39,7 +39,7 @@
     .sidebar {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 25px;
     }
 
     /* Columna Derecha (Contenido principal) */
@@ -60,7 +60,7 @@
     .subtitle { 
       font-size: 0.95rem; 
       color: var(--accent); 
-      margin-bottom: 20px; 
+      margin-bottom: 15px; 
       font-weight: 500; 
     }
 
@@ -80,24 +80,39 @@
       text-transform: uppercase; 
       border-bottom: 1px solid var(--border); 
       padding-bottom: 5px; 
-      margin: 0 0 12px 0; 
+      margin: 0 0 10px 0; 
+    }
+
+    /* Subtítulos específicos para las categorías de skills en el sidebar */
+    .sidebar-section-title {
+      font-size: 0.85rem;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin: 0 0 6px 0;
+      font-weight: 600;
     }
 
     p { margin: 0 0 1rem 0; font-size: 0.95rem; }
 
-    /* Listas de contacto y links */
-    ul.contact-list, ul.blog-list {
+    /* Listas de contacto, links, skills e idiomas */
+    ul.contact-list, ul.blog-list, ul.skills-list, ul.lang-list {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
 
-    ul.contact-list li, ul.blog-list li {
-      font-size: 0.9rem;
+    ul.contact-list li, ul.blog-list li, ul.skills-list li, ul.lang-list li {
+      font-size: 0.88rem;
       margin: 0;
+      color: var(--text);
+    }
+
+    ul.skills-list li {
+      margin-bottom: 10px;
     }
 
     ul.contact-list li a, ul.blog-list li a {
@@ -112,17 +127,6 @@
     }
 
     section { margin-bottom: 1.5rem; }
-
-    .badge-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .badge {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 0.3rem 0.8rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
 
     .timeline-item {
       background: var(--card-bg);
@@ -161,13 +165,13 @@
 
   <div class="page-container">
     
-    <!-- COLUMNA IZQUIERDA: Contacto, Redes y Enlaces -->
+    <!-- COLUMNA IZQUIERDA: Contacto, Skills detallados e Idiomas -->
     <aside class="sidebar">
       <div>
         <h1>Federico Ramundo</h1>
         <div class="subtitle">Software Manager & Engineering Leader 🚀</div>
         <p style="font-size: 0.9rem; color: var(--text);">
-          Especializado en la dirección de proyectos, conducción de equipos multidisciplinarios de alto rendimiento y alineación estratégica.
+          Especializado en la dirección de proyectos, conducción de equipos multidisciplinarios y alineación estratégica.
         </p>
       </div>
 
@@ -181,14 +185,42 @@
       </div>
 
       <div>
-        <h3>Links / Perfil</h3>
-        <ul class="blog-list">
-          <li>🌐 <a href="https://federamundo25.github.io/me/" target="_blank">Portfolio Online</a></li>
+        <h3>Skills & Focus Areas</h3>
+        <ul class="skills-list">
+          <li>
+            <div class="sidebar-section-title">Dominio del Negocio</div>
+            E-commerce, Marketplaces, Fintech (Credits & Cards, Payments), Data & Analytics.
+          </li>
+          <li>
+            <div class="sidebar-section-title">Engineering Leadership</div>
+            Software Management, Escalado de Equipos, Mentoring & Coaching, Calibración de Performance, Roadmap Planning, Capacity Planning, Stakeholder Management, OKRs, Selección de Talento & People Ops.
+          </li>
+          <li>
+            <div class="sidebar-section-title">Agile & Delivery Manager</div>
+            Frameworks Ágiles, Jira Discovery, Backlog, Liderazgo Cross-functional.
+          </li>
+          <li>
+            <div class="sidebar-section-title">IA aplicada a ingeniería y gestión</div>
+            Adopción de GitHub Copilot en equipos de desarrollo, desarrollo de herramientas internas asistido por IA, medición de impacto en productividad.
+          </li>
+          <li>
+            <div class="sidebar-section-title">Engineering Excellence & Metrics</div>
+            Métricas DORA (Cycle Time, Delivery Lead Time, Deployment Frequency, Change Failure Rate, MTTR), Control de Calidad, Operaciones.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Idiomas</h3>
+        <ul class="lang-list">
+          <li>• <strong>Español:</strong> Nativo</li>
+          <li>• <strong>Inglés:</strong> Intermedio</li>
+          <li>• <strong>Italiano:</strong> Básico</li>
         </ul>
       </div>
     </aside>
 
-    <!-- COLUMNA DERECHA: Contenido Principal -->
+    <!-- COLUMNA DERECHA: Contenido Principal (Sobre Mí y Experiencia) -->
     <main class="main-content">
       
       <section>
@@ -203,24 +235,6 @@
           En el último año promoví la adopción de IA en los equipos de ingeniería y la apliqué a la gestión mediante herramientas propias. Me destaco por mi capacidad de adaptación estratégica para 
           transformar desafíos complejos en soluciones escalables orientadas a resultados de alto impacto.
         </p>
-      </section>
-
-      <section>
-        <h2>🛠️ Áreas de Enfoque y Skills</h2>
-        <div class="badge-container">
-          <span class="badge">E-commerce & Marketplaces</span>
-          <span class="badge">Fintech & Pagos</span>
-          <span class="badge">Software Management</span>
-          <span class="badge">Métricas DORA</span>
-          <span class="badge">Scrum Master (CSM)</span>
-          <span class="badge">GitHub Copilot & IA</span>
-          <span class="badge">Data & Analytics</span>
-          <span class="badge">Roadmap & Capacity Planning</span>
-          <span class="badge">Liderazgo de Equipos</span>
-          <span class="badge">OKRs & Estrategia</span>
-          <span class="badge">Presupuestos & Terceros</span>
-          <span class="badge">IA Generativa (Gemini/ChatGPT)</span>
-        </div>
       </section>
 
       <section>
