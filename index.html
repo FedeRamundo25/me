@@ -21,16 +21,98 @@
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem;
+      margin: 0;
+      padding: 0;
     }
-    h1, h2, h3 { color: var(--white); margin-top: 0; }
-    h1 { font-size: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; margin-bottom: 0.5rem; }
-    .subtitle { font-size: 1.2rem; color: var(--accent); margin-bottom: 1.5rem; font-weight: 500; }
-    section { margin-bottom: 2.5rem; }
-    h2 { font-size: 1.4rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; margin-bottom: 1rem; }
-    p { margin-bottom: 1rem; }
+
+    /* Contenedor principal en dos columnas */
+    .page-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 40px;
+    }
+
+    /* Columna Izquierda (Sidebar) */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Columna Derecha (Contenido principal) */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    h1 { 
+      font-size: 1.8rem; 
+      color: var(--white); 
+      margin: 0 0 5px 0; 
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle { 
+      font-size: 0.95rem; 
+      color: var(--accent); 
+      margin-bottom: 20px; 
+      font-weight: 500; 
+    }
+
+    h2 { 
+      font-size: 1.2rem; 
+      border-bottom: 1px solid var(--border); 
+      padding-bottom: 0.4rem; 
+      margin-top: 0;
+      margin-bottom: 1rem; 
+      color: var(--white);
+    }
+
+    h3 { 
+      font-size: 0.85rem; 
+      color: var(--white); 
+      letter-spacing: 1.2px; 
+      text-transform: uppercase; 
+      border-bottom: 1px solid var(--border); 
+      padding-bottom: 5px; 
+      margin: 0 0 12px 0; 
+    }
+
+    p { margin: 0 0 1rem 0; font-size: 0.95rem; }
+
+    /* Listas de contacto y links */
+    ul.contact-list, ul.blog-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    ul.contact-list li, ul.blog-list li {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    ul.contact-list li a, ul.blog-list li a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    ul.contact-list li a:hover, ul.blog-list li a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    section { margin-bottom: 1.5rem; }
+
     .badge-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .badge {
       background: var(--card-bg);
@@ -41,6 +123,7 @@
       font-size: 0.85rem;
       font-weight: 500;
     }
+
     .timeline-item {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -55,113 +138,87 @@
       flex-wrap: wrap;
       gap: 0.5rem;
     }
-    .timeline-header h3 { margin: 0; font-size: 1.1rem; }
+    .timeline-header h3 { margin: 0; font-size: 1.05rem; text-transform: none; letter-spacing: normal; border: none; padding: 0; color: var(--white); }
     .timeline-date { font-size: 0.85rem; color: #8b949e; }
     .timeline-body { margin-top: 0.75rem; font-size: 0.95rem; }
-    ul { padding-left: 1.2rem; margin: 0.5rem 0; }
-    li { margin-bottom: 0.3rem; }
+    
+    ul.job-list { padding-left: 1.2rem; margin: 0.5rem 0; list-style: disc; }
+    ul.job-list li { margin-bottom: 0.3rem; }
+
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    /* Adaptabilidad para dispositivos móviles */
+    @media (max-width: 768px) {
+      .page-container {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Federico Ramundo</h1>
-    <div class="subtitle">Software Manager & Engineering Leader 🚀</div>
-    <p>
-      Especializado en la dirección de proyectos, conducción de equipos multidisciplinarios de alto rendimiento 
-      y la alineación estratégica entre objetivos corporativos y prioridades de ingeniería.
-    </p>
-  </header>
-
-  <section>
-    <h2>📖 Sobre Mí</h2>
-    <p>
-      Sólida trayectoria en la industria tecnológica optimizando la toma de decisiones, la mitigación de riesgos y la resolución de conflictos en entornos dinámicos. 
-      Enfocado en el desarrollo de talento técnico, la implementación de metodologías de mejora continua y la gestión directa de stakeholders clave.
-    </p>
-    <p>
-      En el último año promoví la adopción de IA en equipos de ingeniería (GitHub Copilot) y desarrollé herramientas web de gestión asistidas por IA para la planificación de capacidad y reestructuración de equipos.
-    </p>
-  </section>
-
-  <section>
-    <h2>🛠️ Áreas de Enfoque y Skills</h2>
-    <div class="badge-container">
-      <span class="badge">E-commerce & Marketplaces</span>
-      <span class="badge">Fintech & Pagos</span>
-      <span class="badge">Software Management</span>
-      <span class="badge">Métricas DORA</span>
-      <span class="badge">Scrum Master (CSM)</span>
-      <span class="badge">GitHub Copilot & IA</span>
-      <span class="badge">Data & Analytics</span>
-      <span class="badge">Roadmap & Capacity Planning</span>
-    </div>
-  </section>
-
-  <section>
-    <h2>💼 Experiencia Profesional</h2>
+  <div class="page-container">
     
-    <div class="timeline-item">
-      <div class="timeline-header">
-        <h3>Software Manager — Frávega Tech</h3>
-        <span class="timeline-date">Julio 2022 - Presente</span>
+    <!-- COLUMNA IZQUIERDA: Contacto, Redes y Enlaces -->
+    <aside class="sidebar">
+      <div>
+        <h1>Federico Ramundo</h1>
+        <div class="subtitle">Software Manager & Engineering Leader 🚀</div>
+        <p style="font-size: 0.9rem; color: var(--text);">
+          Especializado en la dirección de proyectos, conducción de equipos multidisciplinarios de alto rendimiento y alineación estratégica.
+        </p>
       </div>
-      <div class="timeline-body">
-        <ul>
-          <li>Responsable de las verticales Marketplace Supply y Fintech (Pricing, Seller Center, Catalog, Credits & Cards, Payments).</li>
-          <li>Escalé el Marketplace de 200 a +1.000 sellers y de 25k a +250k SKUs, multiplicando x7 las ventas del canal digital en 3 años.</li>
-          <li>Lideré el onboarding de Frávega Pay (+130.000 clientes) y soluciones Cash-in/Cash-out (+$1.000M).</li>
-          <li>Diseñé e implementé el modelo de métricas DORA (Cycle Time, MTTR, Deployment Frequency) e impulsé la adopción de IA en ingeniería.</li>
+
+      <div>
+        <h3>Contact</h3>
+        <ul class="contact-list">
+          <li>✉️ <a href="mailto:federamundo@gmail.com">federamundo@gmail.com</a></li>
+          <li>💼 <a href="https://linkedin.com/in/federamundo25" target="_blank">linkedin.com/in/federamundo25</a></li>
+          <li>🐱 <a href="https://github.com/FedeRamundo25" target="_blank">github.com/FedeRamundo25</a></li>
         </ul>
       </div>
-    </div>
 
-    <div class="timeline-item">
-      <div class="timeline-header">
-        <h3>Manager de Data & Analytics — Mercado Libre</h3>
-        <span class="timeline-date">Abril 2020 - Junio 2022</span>
-      </div>
-      <div class="timeline-body">
-        <ul>
-          <li>Gestión integral del área de Data & Analytics alineando unidades de negocio con ingeniería de datos.</li>
-          <li>Ejecución End-to-End de iniciativas de analítica y datos desde la problemática hasta la producción.</li>
-          <li>Mentoring y coaching a líderes de equipo y desarrollo de planes de carrera estructurados.</li>
+      <div>
+        <h3>Links / Perfil</h3>
+        <ul class="blog-list">
+          <li>🌐 <a href="https://federamundo25.github.io/me/" target="_blank">Portfolio Online</a></li>
         </ul>
       </div>
-    </div>
+    </aside>
 
-    <div class="timeline-item">
-      <div class="timeline-header">
-        <h3>Program Manager / Project Manager — Lagash Systems</h3>
-        <span class="timeline-date">Agosto 2014 - Marzo 2020</span>
-      </div>
-      <div class="timeline-body">
-        <ul>
-          <li>Gestión del delivery de un portfolio de +30 proyectos corporativos (YPF, Farmacity, Frávega, IRSA, Galicia Seguros).</li>
-          <li>Dirección de rentabilidad (P&L), staffing, gestión de riesgos y calidad de entregables.</li>
-        </ul>
-      </div>
-    </div>
+    <!-- COLUMNA DERECHA: Contenido Principal -->
+    <main class="main-content">
+      
+      <section>
+        <h2>📖 Summary (Profile)</h2>
+        <p>
+          Software Manager con sólida trayectoria en la industria tecnológica, especializado en la dirección de proyectos y conducción de equipos multidisciplinarios de alto rendimiento. 
+          Mi gestión combina una visión integral del negocio con la excelencia operativa: facilitando la alineación entre los objetivos corporativos y las prioridades de ingeniería, optimizando la toma de decisiones, 
+          la mitigación de riesgos y la resolución de conflictos en entornos dinámicos e inciertos.
+        </p>
+        <p>
+          A lo largo de mi carrera me he enfocado en el desarrollo de talento y líderes, la implementación de metodologías de mejora continua y la gestión directa de stakeholders clave y clientes. 
+          En el último año promoví la adopción de IA en los equipos de ingeniería y la apliqué a la gestión mediante herramientas propias. Me destaco por mi capacidad de adaptación estratégica para 
+          transformar desafíos complejos en soluciones escalables orientadas a resultados de alto impacto.
+        </p>
+      </section>
 
-    <div class="timeline-item">
-      <div class="timeline-header">
-        <h3>Project Manager / Line of Business Manager — Huddle Group</h3>
-        <span class="timeline-date">Octubre 2009 - Agosto 2014</span>
-      </div>
-      <div class="timeline-body">
-        <ul>
-          <li>Gestión integral de proyectos y líneas de negocio (presupuestos, alcance y propuestas técnico-comerciales).</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>📬 Contacto</h2>
-    <p>Email: <a href="mailto:federamundo@gmail.com">federamundo@gmail.com</a></p>
-  </section>
-
-</body>
-</html>
+      <section>
+        <h2>🛠️ Áreas de Enfoque y Skills</h2>
+        <div class="badge-container">
+          <span class="badge">E-commerce & Marketplaces</span>
+          <span class="badge">Fintech & Pagos</span>
+          <span class="badge">Software Management</span>
+          <span class="badge">Métricas DORA</span>
+          <span class="badge">Scrum Master (CSM)</span>
+          <span class="badge">GitHub Copilot & IA</span>
+          <span class="badge">Data & Analytics</span>
+          <span class="badge">Roadmap & Capacity Planning</span>
+          <span class="badge">Liderazgo de Equipos</span>
+          <span class="badge">OKRs & Estrategia</span>
+          <span class="badge">Presupuestos & Terceros</span>
+          <span class="badge">IA Generativa (Gemini/ChatGPT)</span>
+        </div>
+      </section>
