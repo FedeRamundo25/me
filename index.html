@@ -1,37 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Página</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background: #f4f4f4;
-        margin: 0;
-        display: grid;
-        place-items: center;
-        min-height: 100vh;
-      }
-      .container {
-        text-align: center;
-        background: white;
-        padding: 2rem 3rem;
-        border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      }
-      h1 {
-        color: #333;
-      }
-      p {
-        color: #666;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>¡Hola!</h1>
-      <p>Este es el archivo index.html creado en tu repositorio.</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federico Ramundo | Software Manager</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --text: #c9d1d9;
+      --accent: #58a6ff;
+      --border: #30363d;
+      --white: #ffffff;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    h1, h2, h3 { color: var(--white); margin-top: 0; }
+    h1 { font-size: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; margin-bottom: 0.5rem; }
+    .subtitle { font-size: 1.2rem; color: var(--accent); margin-bottom: 1.5rem; font-weight: 500; }
+    section { margin-bottom: 2.5rem; }
+    h2 { font-size: 1.4rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; margin-bottom: 1rem; }
+    p { margin-bottom: 1rem; }
+    .badge-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .badge {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.3rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .timeline-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .timeline-header h3 { margin: 0; font-size: 1.1rem; }
+    .timeline-date { font-size: 0.85rem; color: #8b949e; }
+    .timeline-body { margin-top: 0.75rem; font-size: 0.95rem; }
+    ul { padding-left: 1.2rem; margin: 0.5rem 0; }
+    li { margin-bottom: 0.3rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Federico Ramundo</h1>
+    <div class="subtitle">Software Manager & Engineering Leader 🚀</div>
+    <p>
+      Especializado en la dirección de proyectos, conducción de equipos multidisciplinarios de alto rendimiento 
+      y la alineación estratégica entre objetivos corporativos y prioridades de ingeniería.
+    </p>
+  </header>
+
+  <section>
+    <h2>📖 Sobre Mí</h2>
+    <p>
+      Sólida trayectoria en la industria tecnológica optimizando la toma de decisiones, la mitigación de riesgos y la resolución de conflictos en entornos dinámicos. 
+      Enfocado en el desarrollo de talento técnico, la implementación de metodologías de mejora continua y la gestión directa de stakeholders clave.
+    </p>
+    <p>
+      En el último año promoví la adopción de IA en equipos de ingeniería (GitHub Copilot) y desarrollé herramientas web de gestión asistidas por IA para la planificación de capacidad y reestructuración de equipos.
+    </p>
+  </section>
+
+  <section>
+    <h2>🛠️ Áreas de Enfoque y Skills</h2>
+    <div class="badge-container">
+      <span class="badge">E-commerce & Marketplaces</span>
+      <span class="badge">Fintech & Pagos</span>
+      <span class="badge">Software Management</span>
+      <span class="badge">Métricas DORA</span>
+      <span class="badge">Scrum Master (CSM)</span>
+      <span class="badge">GitHub Copilot & IA</span>
+      <span class="badge">Data & Analytics</span>
+      <span class="badge">Roadmap & Capacity Planning</span>
     </div>
-  </body>
+  </section>
+
+  <section>
+    <h2>💼 Experiencia Profesional</h2>
+    
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h3>Software Manager — Frávega Tech</h3>
+        <span class="timeline-date">Julio 2022 - Presente</span>
+      </div>
+      <div class="timeline-body">
+        <ul>
+          <li>Responsable de las verticales Marketplace Supply y Fintech (Pricing, Seller Center, Catalog, Credits & Cards, Payments).</li>
+          <li>Escalé el Marketplace de 200 a +1.000 sellers y de 25k a +250k SKUs, multiplicando x7 las ventas del canal digital en 3 años.</li>
+          <li>Lideré el onboarding de Frávega Pay (+130.000 clientes) y soluciones Cash-in/Cash-out (+$1.000M).</li>
+          <li>Diseñé e implementé el modelo de métricas DORA (Cycle Time, MTTR, Deployment Frequency) e impulsé la adopción de IA en ingeniería.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h3>Manager de Data & Analytics — Mercado Libre</h3>
+        <span class="timeline-date">Abril 2020 - Junio 2022</span>
+      </div>
+      <div class="timeline-body">
+        <ul>
+          <li>Gestión integral del área de Data & Analytics alineando unidades de negocio con ingeniería de datos.</li>
+          <li>Ejecución End-to-End de iniciativas de analítica y datos desde la problemática hasta la producción.</li>
+          <li>Mentoring y coaching a líderes de equipo y desarrollo de planes de carrera estructurados.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h3>Program Manager / Project Manager — Lagash Systems</h3>
+        <span class="timeline-date">Agosto 2014 - Marzo 2020</span>
+      </div>
+      <div class="timeline-body">
+        <ul>
+          <li>Gestión del delivery de un portfolio de +30 proyectos corporativos (YPF, Farmacity, Frávega, IRSA, Galicia Seguros).</li>
+          <li>Dirección de rentabilidad (P&L), staffing, gestión de riesgos y calidad de entregables.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h3>Project Manager / Line of Business Manager — Huddle Group</h3>
+        <span class="timeline-date">Octubre 2009 - Agosto 2014</span>
+      </div>
+      <div class="timeline-body">
+        <ul>
+          <li>Gestión integral de proyectos y líneas de negocio (presupuestos, alcance y propuestas técnico-comerciales).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📬 Contacto</h2>
+    <p>Email: <a href="mailto:federamundo@gmail.com">federamundo@gmail.com</a></p>
+  </section>
+
+</body>
 </html>
