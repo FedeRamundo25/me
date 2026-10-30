@@ -83,20 +83,20 @@
       margin: 0 0 10px 0; 
     }
 
-    /* Subtítulos específicos para las categorías de skills en el sidebar */
+    /* Subtítulos específicos para las categorías en el sidebar */
     .sidebar-section-title {
       font-size: 0.85rem;
       color: var(--white);
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      margin: 0 0 6px 0;
+      margin: 0 0 4px 0;
       font-weight: 600;
     }
 
     p { margin: 0 0 1rem 0; font-size: 0.95rem; }
 
-    /* Listas de contacto, links, skills e idiomas */
-    ul.contact-list, ul.blog-list, ul.skills-list, ul.lang-list {
+    /* Listas de contacto, links, skills, educación e idiomas */
+    ul.contact-list, ul.blog-list, ul.skills-list, ul.lang-list, ul.edu-list {
       list-style: none;
       padding: 0;
       margin: 0;
@@ -105,13 +105,13 @@
       gap: 8px;
     }
 
-    ul.contact-list li, ul.blog-list li, ul.skills-list li, ul.lang-list li {
+    ul.contact-list li, ul.blog-list li, ul.skills-list li, ul.lang-list li, ul.edu-list li {
       font-size: 0.88rem;
       margin: 0;
       color: var(--text);
     }
 
-    ul.skills-list li {
+    ul.edu-list li, ul.skills-list li {
       margin-bottom: 10px;
     }
 
@@ -147,7 +147,7 @@
     .timeline-body { margin-top: 0.75rem; font-size: 0.95rem; }
     
     ul.job-list { padding-left: 1.2rem; margin: 0.5rem 0; list-style: disc; }
-    ul.job-list li { margin-bottom: 0.3rem; }
+    ul.job-list li { margin-bottom: 0.4rem; }
 
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -165,7 +165,7 @@
 
   <div class="page-container">
     
-    <!-- COLUMNA IZQUIERDA: Contacto, Skills detallados e Idiomas -->
+    <!-- COLUMNA IZQUIERDA: Contacto, Educación, Skills e Idiomas -->
     <aside class="sidebar">
       <div>
         <h1>Federico Ramundo</h1>
@@ -178,9 +178,32 @@
       <div>
         <h3>Contact</h3>
         <ul class="contact-list">
+          <li>📞 +54 11 3629-3027</li>
           <li>✉️ <a href="mailto:federamundo@gmail.com">federamundo@gmail.com</a></li>
-          <li>💼 <a href="https://linkedin.com/in/federamundo25" target="_blank">linkedin.com/in/federamundo25</a></li>
-          <li>🐱 <a href="https://github.com/FedeRamundo25" target="_blank">github.com/FedeRamundo25</a></li>
+          <li>💼 <a href="https://linkedin.com/in/federamundo25" target="_blank">LinkedIn</a></li>
+          <li>🐱 <a href="https://github.com/FedeRamundo25" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Educación</h3>
+        <ul class="edu-list">
+          <li>
+            <div class="sidebar-section-title">Licenciado en Administración de Empresas</div>
+            Universidad de Buenos Aires (UBA)[cite: 5]
+          </li>
+          <li>
+            <div class="sidebar-section-title">Certified Scrum Master (CSM)</div>
+            Scrum Alliance[cite: 5]
+          </li>
+          <li>
+            <div class="sidebar-section-title">Agile Team Facilitator Workshop & Retrospectives</div>
+            Kleer[cite: 5]
+          </li>
+          <li>
+            <div class="sidebar-section-title">Project Management Program (PMI)</div>
+            PMValue[cite: 5]
+          </li>
         </ul>
       </div>
 
@@ -189,23 +212,23 @@
         <ul class="skills-list">
           <li>
             <div class="sidebar-section-title">Dominio del Negocio</div>
-            E-commerce, Marketplaces, Fintech (Credits & Cards, Payments), Data & Analytics.
+            E-commerce, Marketplaces, Fintech (Credits & Cards, Payments), Data & Analytics.[cite: 4]
           </li>
           <li>
             <div class="sidebar-section-title">Engineering Leadership</div>
-            Software Management, Escalado de Equipos, Mentoring & Coaching, Calibración de Performance, Roadmap Planning, Capacity Planning, Stakeholder Management, OKRs, Selección de Talento & People Ops.
+            Software Management, Escalado de Equipos, Mentoring & Coaching, Calibración de Performance, Roadmap Planning, Capacity Planning, Stakeholder Management, OKRs, Selección de Talento & People Ops.[cite: 4]
           </li>
           <li>
             <div class="sidebar-section-title">Agile & Delivery Manager</div>
-            Frameworks Ágiles, Jira Discovery, Backlog, Liderazgo Cross-functional.
+            Frameworks Ágiles, Jira Discovery, Backlog, Liderazgo Cross-functional.[cite: 4]
           </li>
           <li>
             <div class="sidebar-section-title">IA aplicada a ingeniería y gestión</div>
-            Adopción de GitHub Copilot en equipos de desarrollo, desarrollo de herramientas internas asistido por IA, medición de impacto en productividad.
+            Adopción de GitHub Copilot en equipos de desarrollo, desarrollo de herramientas internas asistido por IA, medición de impacto en productividad.[cite: 4]
           </li>
           <li>
             <div class="sidebar-section-title">Engineering Excellence & Metrics</div>
-            Métricas DORA (Cycle Time, Delivery Lead Time, Deployment Frequency, Change Failure Rate, MTTR), Control de Calidad, Operaciones.
+            Métricas DORA (Cycle Time, Delivery Lead Time, Deployment Frequency, Change Failure Rate, MTTR), Control de Calidad, Operaciones.[cite: 4]
           </li>
         </ul>
       </div>
@@ -213,9 +236,9 @@
       <div>
         <h3>Idiomas</h3>
         <ul class="lang-list">
-          <li>• <strong>Español:</strong> Nativo</li>
-          <li>• <strong>Inglés:</strong> Intermedio</li>
-          <li>• <strong>Italiano:</strong> Básico</li>
+          <li>• <strong>Español:</strong> Nativo[cite: 4]</li>
+          <li>• <strong>Inglés:</strong> Intermedio[cite: 4]</li>
+          <li>• <strong>Italiano:</strong> Básico[cite: 4]</li>
         </ul>
       </div>
     </aside>
@@ -240,64 +263,16 @@
       <section>
         <h2>💼 Experiencia Profesional</h2>
         
+        <!-- FRÁVEGA TECH -->
         <div class="timeline-item">
           <div class="timeline-header">
             <h3>Software Manager — Frávega Tech</h3>
-            <span class="timeline-date">Julio 2022 - Presente</span>
+            <span class="timeline-date">Julio 2022 - Presente | Buenos Aires</span>
           </div>
           <div class="timeline-body">
+            <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">
+              <strong>Responsable de las verticales de Marketplace Supply y Fintech</strong>, liderando los dominios de ingeniería y producto en Pricing, Seller Center, Catalog, Catalog Management, Credits & Cards y Payments. Gestión directa de Tech Leads y Product Leads.[cite: 6]
+            </p>
             <ul class="job-list">
-              <li>Responsable de las verticales Marketplace Supply y Fintech (Pricing, Seller Center, Catalog, Credits & Cards, Payments).</li>
-              <li>Escalé el Marketplace de 200 a +1.000 sellers y de 25k a +250k SKUs, multiplicando x7 las ventas del canal digital en 3 años.</li>
-              <li>Lideré el onboarding de Frávega Pay (+130.000 clientes) y soluciones Cash-in/Cash-out (+$1.000M).</li>
-              <li>Diseñé e implementé el modelo de métricas DORA (Cycle Time, MTTR, Deployment Frequency) e impulsé la adopción de IA en ingeniería.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <h3>Manager de Data & Analytics — Mercado Libre</h3>
-            <span class="timeline-date">Abril 2020 - Junio 2022</span>
-          </div>
-          <div class="timeline-body">
-            <ul class="job-list">
-              <li>Gestión integral del área de Data & Analytics alineando unidades de negocio con ingeniería de datos.</li>
-              <li>Ejecución End-to-End de iniciativas de analítica y datos desde la problemática hasta la producción.</li>
-              <li>Mentoring y coaching a líderes de equipo y desarrollo de planes de carrera estructurados.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <h3>Program Manager / Project Manager — Lagash Systems</h3>
-            <span class="timeline-date">Agosto 2014 - Marzo 2020</span>
-          </div>
-          <div class="timeline-body">
-            <ul class="job-list">
-              <li>Gestión del delivery de un portfolio de +30 proyectos corporativos (YPF, Farmacity, Frávega, IRSA, Galicia Seguros).</li>
-              <li>Dirección de rentabilidad (P&L), staffing, gestión de riesgos y calidad de entregables.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <h3>Project Manager / Line of Business Manager — Huddle Group</h3>
-            <span class="timeline-date">Octubre 2009 - Agosto 2014</span>
-          </div>
-          <div class="timeline-body">
-            <ul class="job-list">
-              <li>Gestión integral de proyectos y líneas de negocio (presupuestos, alcance y propuestas técnico-comerciales).</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-  </div>
-
-</body>
-</html>
+              <li><strong>Liderazgo en Marketplace Supply:</strong> Escalé el Marketplace de 200 a +1.000 sellers y de 25.000 a +250.000 SKUs, multiplicando x7 la participación del canal digital sobre el total de ventas en 3 años. Para sostener ese crecimiento, reduje un 80% las tareas manuales y un 75% los tiempos de onboarding de sellers, optimizando herramientas y procesos de Marketplace (ABM, precios, liquidación). Dupliqué la velocidad de publicación de productos al unificar las herramientas de Pricing y Catálogo, coordinando a los equipos involucrados.[cite: 6]</li>
+              <li><strong>Liderazgo en Fintech:</strong> Lideré el desarrollo del Onboarding de Frávega Pay y de las soluciones de Cash-in y Cash-out, alcanzando +130.000 clientes onboard
